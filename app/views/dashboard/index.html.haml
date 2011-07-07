@@ -8,7 +8,9 @@
       %h2.title Foruns
       %ul.list
         - @foruns.each do |forum|
-          %li=link_to forum.title, forum
+          %li
+            %h3=link_to forum.title, forum
+            %p= forum.proposal
 -content_for :sidebar do
   .block.notice
     %h4 Teste

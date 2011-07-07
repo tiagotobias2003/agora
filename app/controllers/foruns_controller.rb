@@ -1,4 +1,4 @@
 class ForunsController < ApplicationController
-  def view
-  end
+    inherit_resources
+    defaults :resource_class => Forum
 end
