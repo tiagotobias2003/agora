@@ -14,7 +14,7 @@
 
   .content
     .inner
-      =semantic_form_for resource do |f|
+      =semantic_form_for resource, :url => forum_topics_path(resource.forum) do |f|
         =f.inputs :subject
         =f.inputs :content
         %hr/

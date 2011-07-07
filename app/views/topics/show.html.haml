@@ -1,0 +1,20 @@
+#block-formtastic.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li
+        %a{:href => ''} teste
+  .breadcrumb
+    %ul
+      %li.first
+        %a{:href => '/'} Dashboard
+      %li
+        =link_to resource.forum.title, resource.forum
+      %li.active
+        %a{:href => ''}=resource.subject
+
+  .content
+    %h2=resource.subject
+    .inner
+      %p=resource.content
+
+

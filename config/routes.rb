@@ -5,7 +5,7 @@ Agora::Application.routes.draw do
   resources :forums, :path => '/f' do
     resources :topics, :path => '/t'
   end
-  resources :topics, :path => '/t'
+#  resources :topics, :path => '/t'
 
 
   # The priority is based upon order of creation:
