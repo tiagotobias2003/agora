@@ -1,8 +1,4 @@
 #block-text.block
-  .secondary-navigation
-    %ul.wat-cf
-      %li
-        %a{:href => ''} teste
   .breadcrumb
     %ul
       %li.first
@@ -30,7 +26,7 @@
           %tr{:class => cycle('odd', 'even')}
             %td
               %input.checkbox.toggle{:type => 'checkbox'}
-            %td=topic.subject           
+            %td=link_to topic.subject, forum_topic_path(resource, topic)
             %td.last
               %a{:href => '#'}
                 %img{:alt => 'Show', :onmouseout => "this.src='/stylesheets/themes/activo/images/icons/24/show.png'", :onmouseover => "this.src='/stylesheets/themes/activo/images/icons/24/show-hover.png'", :src => "/stylesheets/themes/activo/images/icons/24/show.png", :title => "Show"}

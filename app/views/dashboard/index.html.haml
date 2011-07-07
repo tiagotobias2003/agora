@@ -1,16 +1,14 @@
 #block-text.block
-  .secondary-navigation
-    %ul.wat-cf
-      %li
-        %a{:href => ''} teste
   .content
+    %h2.title Dashboard
     .inner
-      %h2.title Foruns
+      %h3 Foruns
       %ul.list
         - @foruns.each do |forum|
           %li
-            %h3=link_to forum.title, forum
-            %p= forum.proposal
+            .item
+              %h4=link_to forum.title, forum
+              %p= forum.proposal
 -content_for :sidebar do
   .block.notice
     %h4 Teste
