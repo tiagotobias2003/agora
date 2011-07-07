@@ -1,0 +1,25 @@
+#block-login.block
+  %h2 Sign in
+  .content.login
+    = form_for resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form login'} do |f|
+      .group.wat-cf
+        .left
+          = f.label :email, :class => 'label right'
+        .right
+          = f.email_field :email, :class => 'text_field'
+      .group.wat-cf
+        .left
+          = f.label :password, :class => 'label right'
+        .right
+          = f.password_field :password, :class => 'text_field'
+      .group.wat-cf
+        .right
+          = f.check_box :remember_me, :class => 'checkbox'
+          = f.label :remember_me, :class => 'checkbox'
+      .group.wat-cf.navform
+        .right
+          %button.button{:type => 'submit'}
+            %img{:src => "/stylesheets/themes/activo/images/icons/key.png", :alt=>"Save"}
+            Login
+      .group.wat-cf
+        = render :partial => 'devise/shared/links'
