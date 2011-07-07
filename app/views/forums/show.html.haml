@@ -1,0 +1,42 @@
+#block-text.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li
+        %a{:href => ''} teste
+  .breadcrumb
+    %ul
+      %li.first
+        %a{:href => '/'} Dashboard
+      %li.active
+        %a{:href => ''}=resource.title
+
+  .content
+    .control
+      %a.button{:href => ''}
+        %img{:src=>'/stylesheets/themes/activo/images/icons/add.png', :alt=> 'Add'} Add
+      %a.button{:href => ''}
+        %img{:src=>'/stylesheets/themes/activo/images/icons/delete.png', :alt=> 'Remove'} Remove
+
+    %h2.title=resource.title
+    .inner
+      %p=resource.proposal
+      %table.table
+        %tr.first
+          %th
+            %input.checkbox.toggle{:type => 'checkbox'}
+          %th Topic
+          %th.last &nbsp;
+        - resource.topics.each do |topic|
+          %tr{:class => cycle('odd', 'even')}
+            %td
+              %input.checkbox.toggle{:type => 'checkbox'}
+            %td=topic.subject           
+            %td.last
+              %a{:href => '#'}
+                %img{:alt => 'Show', :onmouseout => "this.src='/stylesheets/themes/activo/images/icons/24/show.png'", :onmouseover => "this.src='/stylesheets/themes/activo/images/icons/24/show-hover.png'", :src => "/stylesheets/themes/activo/images/icons/24/show.png", :title => "Show"}
+
+
+-content_for :sidebar do
+  .block.notice
+    %h4 Teste
+    %p Olá mundo

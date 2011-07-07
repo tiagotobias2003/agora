@@ -2,7 +2,6 @@ Agora::Application.routes.draw do
   devise_for :users,  :controllers => { :sessions => "users/sessions", :registrations => "users/registrations" }
   root :to => "dashboard#index"
 
-  match 'f/:id' => 'foruns#view'
   resources :forums, :path => '/f'
 
   # The priority is based upon order of creation:
