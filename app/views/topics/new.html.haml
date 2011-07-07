@@ -1,0 +1,28 @@
+#block-formtastic.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li
+        %a{:href => ''} teste
+  .breadcrumb
+    %ul
+      %li.first
+        %a{:href => '/'} Dashboard
+      %li
+        =link_to resource.forum.title, resource.forum
+      %li.active
+        %a{:href => ''} New topic
+
+  .content
+    .inner
+      =semantic_form_for resource do |f|
+        =f.inputs :subject
+        =f.inputs :content
+        %hr/
+        =f.buttons do
+          %button.button{:type => 'submit'} Save
+
+
+-content_for :sidebar do
+  .block.notice
+    %h4 Teste
+    %p Olá mundo

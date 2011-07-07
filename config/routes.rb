@@ -2,7 +2,11 @@ Agora::Application.routes.draw do
   devise_for :users,  :controllers => { :sessions => "users/sessions", :registrations => "users/registrations" }
   root :to => "dashboard#index"
 
-  resources :forums, :path => '/f'
+  resources :forums, :path => '/f' do
+    resources :topics, :path => '/t'
+  end
+  resources :topics, :path => '/t'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
