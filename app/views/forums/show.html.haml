@@ -28,7 +28,7 @@
               %input.checkbox.toggle{:type => 'checkbox'}
             %td=link_to topic.subject, forum_topic_path(resource, topic)
             %td.last
-              %a{:href => '#'}
+              %a{:href => forum_topic_path(resource, topic)}
                 %img{:alt => 'Show', :onmouseout => "this.src='/stylesheets/themes/activo/images/icons/24/show.png'", :onmouseover => "this.src='/stylesheets/themes/activo/images/icons/24/show-hover.png'", :src => "/stylesheets/themes/activo/images/icons/24/show.png", :title => "Show"}
 
 
