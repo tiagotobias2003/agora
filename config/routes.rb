@@ -2,9 +2,9 @@ Agora::Application.routes.draw do
   devise_for :users,  :controllers => { :sessions => "users/sessions", :registrations => "users/registrations" }
   root :to => "dashboard#index"
 
-  resources :forums, :path => '/f' do
-    resources :topics, :path => '/t' do
-      resources :posts, :path => '/p'
+  resources :forums, :only => :show, :path => '/f' do
+    resources :topics, :only => [:new, :create, :show], :path => '/t' do
+      resources :posts, :only => [:create], :path => '/p'
     end
   end
 
