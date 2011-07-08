@@ -12,5 +12,12 @@
     %h2=resource.subject
     .inner
       %p=resource.content
-
+      %hr/
+      #new_post 
+        %h3 Post something...
+        =semantic_form_for @new_post, :url => '' do |f|
+          =f.inputs :content
+          %hr/
+          =f.buttons do
+            %button.button{:type => 'submit'} Post
 
