@@ -13,6 +13,7 @@
     <div id="header">
       <h1><a href="/">Ágora</a></h1>
       <div id="user-navigation">
+        <%= current_user.email %>
         <ul class="wat-cf">
           <li><a href="#"><img src="/stylesheets/themes/activo/images/session/home.png" title="<%= t("web-app-theme.dashboard", :default => "Dashboard") %>"/></a></li>
           <li><a href="#"><img src="/stylesheets/themes/activo/images/session/account.png" title="<%= t("web-app-theme.profile", :default => "Profile") %>" /></a></li>

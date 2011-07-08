@@ -5,6 +5,8 @@ class TopicsController < ApplicationController
     actions :new, :create, :show
 
     before_filter :build_new_post, :only => :show
+    before_filter :user_association, :only => :create
+
 
     protected
     def build_new_post
