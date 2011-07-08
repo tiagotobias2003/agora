@@ -12,10 +12,15 @@
     %h2=resource.subject
     .inner
       %p=resource.content
+      %ul.list
+        -resource.posts.each do |post|
+          %li.post
+            .item
+              %p=post.content
       %hr/
       #new_post 
         %h3 Post something...
-        =semantic_form_for @new_post, :url => '' do |f|
+        =semantic_form_for @new_post, :url => forum_topic_posts_path(resource.forum, resource) do |f|
           =f.inputs :content
           %hr/
           =f.buttons do

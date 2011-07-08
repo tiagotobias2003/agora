@@ -3,9 +3,11 @@ Agora::Application.routes.draw do
   root :to => "dashboard#index"
 
   resources :forums, :path => '/f' do
-    resources :topics, :path => '/t'
+    resources :topics, :path => '/t' do
+      resources :posts, :path => '/p'
+    end
   end
-#  resources :topics, :path => '/t'
+
 
 
   # The priority is based upon order of creation:
