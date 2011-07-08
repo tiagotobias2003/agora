@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class PostsController < InternalController
     inherit_resources
     belongs_to :topic
 

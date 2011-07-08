@@ -1,4 +1,4 @@
-class TopicsController < ApplicationController
+class TopicsController < InternalController
     inherit_resources
     belongs_to :forum
 

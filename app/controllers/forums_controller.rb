@@ -1,4 +1,4 @@
-class ForumsController < ApplicationController
+class ForumsController < InternalController
     inherit_resources
 
     actions :show
