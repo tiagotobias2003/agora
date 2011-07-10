@@ -16,14 +16,10 @@
       %p=resource.proposal
       %table.table
         %tr.first
-          %th
-            %input.checkbox.toggle{:type => 'checkbox'}
           %th Topic
           %th.last &nbsp;
         - resource.topics.each do |topic|
           %tr{:class => cycle('odd', 'even')}
-            %td
-              %input.checkbox.toggle{:type => 'checkbox'}
             %td=link_to topic.subject, forum_topic_path(resource, topic)
             %td.last
               %a{:href => forum_topic_path(resource, topic)}

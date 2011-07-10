@@ -6,9 +6,8 @@
       %ul.list
         - @foruns.each do |forum|
           %li
-            .item
-              %h4=link_to forum.title, forum
-              %p= forum.proposal
+            %h4=link_to forum.title, forum
+            %p= forum.proposal
 -content_for :sidebar do
   .block.notice
     %h4 Teste
