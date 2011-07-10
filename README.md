@@ -24,6 +24,10 @@ Who I am?
 
 I'm Halan Pinheiro, software developer, and anarchist politic. I belong to the group #foramicarla, a group against the current mayor in my city (and against the representative democracy system). We think about something like this system, couse we don't trust in the companies that maintain the social-networks, and we need a system more private.
 
+What is working at the moment?
+==============================
+
+* Very basic forum system with login (working!)
 
 Enjoy it
 
