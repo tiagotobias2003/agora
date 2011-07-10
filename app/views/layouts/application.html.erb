@@ -15,7 +15,7 @@
       <div id="user-navigation">
         <%= current_user.email %>
         <ul class="wat-cf">
-          <li><a href="#"><img src="/stylesheets/themes/activo/images/session/home.png" title="<%= t("web-app-theme.dashboard", :default => "Dashboard") %>"/></a></li>
+          <li><a href="/"><img src="/stylesheets/themes/activo/images/session/home.png" title="<%= t("web-app-theme.dashboard", :default => "Dashboard") %>"/></a></li>
           <li><a href="#"><img src="/stylesheets/themes/activo/images/session/account.png" title="<%= t("web-app-theme.profile", :default => "Profile") %>" /></a></li>
           <li><a href="#"><img src="/stylesheets/themes/activo/images/session/config.png" title="<%= t("web-app-theme.preferences", :default => "preferences") %>" /></a></li>
           <li><%= link_to raw("<img src=\"/stylesheets/themes/activo/images/session/logout.png\" title=\"#{t("web-app-theme.logout", :default => "Logout") }\" />"), destroy_user_session_path, :method => :delete %></li>
