@@ -13,6 +13,7 @@ gem 'web-app-theme'
 gem 'attrtastic'
 gem 'formtastic'
 gem 'haml'
+gem 'jquery-rails', '>= 1.0.12'
 # Use unicorn as the web server
 # gem 'unicorn'
 
