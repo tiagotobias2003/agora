@@ -4,7 +4,7 @@
   <title>Ágora</title>
   <%= stylesheet_link_tag "jquery-ui.css", "base", "formtastic", "jquery.tipsy", "uniform.default.css", "themes/activo/style",  :cache => true %>
   <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js', :cache => true %>
-  <%= javascript_include_tag 'jquery-ui.min', 'application', 'jquery.tipsy', 'jquery.uniform.min', :cache => true %>
+  <%= javascript_include_tag 'jquery-ui.min', 'jquery_ujs', 'application', 'jquery.tipsy', 'jquery.uniform.min', :cache => true %>
 
   <%= csrf_meta_tag %>
 </head>
@@ -18,7 +18,7 @@
           <li><a href="#"><img src="/stylesheets/themes/activo/images/session/home.png" title="<%= t("web-app-theme.dashboard", :default => "Dashboard") %>"/></a></li>
           <li><a href="#"><img src="/stylesheets/themes/activo/images/session/account.png" title="<%= t("web-app-theme.profile", :default => "Profile") %>" /></a></li>
           <li><a href="#"><img src="/stylesheets/themes/activo/images/session/config.png" title="<%= t("web-app-theme.preferences", :default => "preferences") %>" /></a></li>
-          <li><a href="#"><img src="/stylesheets/themes/activo/images/session/logout.png" title="<%= t("web-app-theme.logout", :default => "Logout") %>" /></a></li>
+          <li><%= link_to raw("<img src=\"/stylesheets/themes/activo/images/session/logout.png\" title=\"#{t("web-app-theme.logout", :default => "Logout") }\" />"), destroy_user_session_path, :method => :delete %></li>
 
         </ul>
       </div>
