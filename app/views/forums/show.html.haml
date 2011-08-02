@@ -16,13 +16,15 @@
       %p=resource.proposal
       %table.table
         %tr.first
+          %th
           %th Topic
           %th.last &nbsp;
         - resource.topics.each do |topic|
           %tr{:class => cycle('odd', 'even')}
+            %td.avatar
+              %img{:src => "#{topic.user.gravatar_url(:size => '30')}", :title => "#{topic.user.email}"}
             %td=link_to topic.subject, forum_topic_path(resource, topic)
             %td.last
               %a{:href => forum_topic_path(resource, topic)}
                 %img{:alt => 'Show', :onmouseout => "this.src='/stylesheets/themes/activo/images/icons/24/show.png'", :onmouseover => "this.src='/stylesheets/themes/activo/images/icons/24/show-hover.png'", :src => "/stylesheets/themes/activo/images/icons/24/show.png", :title => "Show"}
-
 

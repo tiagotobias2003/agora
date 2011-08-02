@@ -14,6 +14,7 @@ gem 'attrtastic'
 gem 'formtastic'
 gem 'haml'
 gem 'jquery-rails', '>= 1.0.12'
+gem 'gravtastic'
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -36,3 +37,4 @@ gem 'ruby-debug'
 # group :development, :test do
 #   gem 'webrat'
 # end
+

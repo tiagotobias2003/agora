@@ -16,9 +16,11 @@
         -resource.posts.each do |post|
           %li.post
             .item
+              -if post.user
+                %img.avatar{:src => "#{post.user.gravatar_url(:size => '30')}", :title => "#{post.user.email}"}
               %p=post.content
       %hr/
-      #new_post 
+      #new_post
         %h3 Post something...
         =semantic_form_for @new_post, :url => forum_topic_posts_path(resource.forum, resource) do |f|
           =f.inputs :content
